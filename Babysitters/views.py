@@ -8,7 +8,7 @@ from django.core.mail import EmailMessage
 from django.shortcuts import render, redirect
 
 from Babysitters.models import Available, AvailableMultan, AvailableIslamabad, AvailableGujranwala, AvailableKarachi, \
-    AvailableSialkot, AvailablePeshawar, AvailableGujrat
+    AvailableSialkot, AvailablePeshawar, AvailableGujrat, Register
 
 
 def login_view(request):
@@ -302,3 +302,21 @@ def available_gujrat(request):
 
 def packages(request):
     return render(request, 'auth/packages.html')
+
+
+def register(request):
+    if request.method == "POST":
+        Name = request.POST.get('Name')
+        CNIC = request.POST.get('CNIC')
+        Address = request.POST.get('Address')
+        Phone = request.POST.get('Phone')
+        Email = request.POST.get('Email')
+        Childage = request.POST.get('Childage')
+        Hours = request.POST.get('Hours')
+        registeration = Register.objects.create(Name=Name, CNIC=CNIC, Address=Address, Phone=Phone, Email=Email,
+                                                Childage=Childage, Hours=Hours)
+
+        registeration.save()
+        return redirect('/register')
+
+    return render(request, 'auth/register.html')

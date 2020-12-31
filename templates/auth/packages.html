@@ -71,13 +71,6 @@
             letter-spacing: 0.2em;
         }
 
-        /*
-        *
-        * ==========================================
-        * FOR DEMO PURPOSES
-        * ==========================================
-        *
-        */
 
         body {
             background-color: lightgray;
@@ -91,7 +84,6 @@
 <body>
 
 
-<!-- END -->
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <div class="container-fluid">
 
@@ -128,7 +120,7 @@
                     <a class="nav-link text-light" href="{% url 'logout' %}">&nbsp;&nbsp;Logout</a>
                 </li>
             </ul>
-            <!-- ./End of right navbar -->
+
         </div>
     </div>
 </nav>
@@ -154,11 +146,11 @@
                     <i class="fa fa-check mr-2 text-primary"></i>
                 </li>
             </ul>
-            <a href="#" class="btn btn-primary btn-block p-2 shadow rounded-pill">Call at +923127276714</a>
+            <a href="{% url 'register' %}" class="btn btn-primary btn-block p-2 shadow rounded-pill">Buy this
+                package</a>
         </div>
     </div>
     <!-- END -->
-
 
     <!-- Pricing Table-->
     <div class="col-lg-4 mb-5 mb-lg-0">
@@ -180,7 +172,8 @@
                     <i class="fa fa-check mr-2 text-primary"></i>
                 </li>
             </ul>
-            <a href="#" class="btn btn-primary btn-block p-2 shadow rounded-pill">Call at +923127276714</a>
+            <a href="{% url 'register' %}" class="btn btn-primary btn-block p-2 shadow rounded-pill">Buy this
+                package</a>
         </div>
     </div>
     <!-- END -->
@@ -206,15 +199,16 @@
                     <i class="fa fa-check mr-2 text-primary"></i>
                 </li>
             </ul>
-            <a href="#" class="btn btn-primary btn-block p-2 shadow rounded-pill">Call at +923127276714</a>
+            <a href="{% url 'register' %}" class="btn btn-primary btn-block p-2 shadow rounded-pill">Buy this
+                package</a>
         </div>
     </div>
     <!-- END -->
 
 </div>
 <div>
-    <footer class="container-fluid text-center bg-dark" style="font-size: 12px">
-        <span>&#169; Copyrights 2020 - Seerat Devops</span>
+    <footer class="container-fluid text-center bg-dark">
+        <span><script>document.write(new Date().getFullYear())</script>&nbsp;&#169; Copyrights - Seerat Devops</span>
     </footer>
 </div>
 

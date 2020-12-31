@@ -131,3 +131,15 @@ class AvailableGujrat(models.Model):
     Skills = models.CharField(max_length=200)
     Education = models.CharField(max_length=100)
     Email = models.EmailField()
+
+
+class Register(models.Model):
+    Name = models.CharField(max_length=100)
+    CNIC = models.IntegerField()
+    Address = models.CharField(max_length=100)
+    Phone = models.IntegerField()
+    Email = models.EmailField()
+    Childage = models.CharField(max_length=100)
+    Hours = models.CharField(max_length=100)
+
+    

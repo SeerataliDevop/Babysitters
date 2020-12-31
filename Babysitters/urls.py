@@ -39,6 +39,7 @@ urlpatterns = [
     path('available_peshawar', views.available_peshawar, name="available_peshawar"),
     path('available_gujrat', views.available_gujrat, name="available_gujrat"),
     path('packages', views.packages, name="packages"),
+    path('register', views.register, name="register"),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
